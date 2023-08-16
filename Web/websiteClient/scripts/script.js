@@ -16,17 +16,17 @@ for (const productName in cart) {
   total += cart[productName].quantity;
 }
 
-if(total > 0) {
+if (total > 0) {
   cartTotal.textContent = total;
 }
 
-if(total === 0) {
+if (total === 0) {
   cartTotall.style.display = 'none';
 } else {
   cartTotall.style.display = 'block';
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const categoryButtons = document.querySelectorAll('.category-button');
   const productsContainer = document.querySelector('.products-container');
   const categoryElement = document.querySelector('.category');
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       const addToCartButtons = document.querySelectorAll('.add-to-cart');
       const quantityElements = document.querySelectorAll('.quantity h5');
-      
+
       quantityElements.forEach(element => {
         const productName = element.parentNode.parentNode.querySelector('h3').textContent;
 
@@ -93,11 +93,11 @@ document.addEventListener("DOMContentLoaded", function() {
             total += cart[productName].quantity;
           }
 
-          if(total > 0) {
+          if (total > 0) {
             cartTotal.textContent = total;
           }
 
-          if(total === 0) {
+          if (total === 0) {
             cartTotall.style.display = 'none';
           } else {
             cartTotall.style.display = 'block';

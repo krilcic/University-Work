@@ -1,11 +1,11 @@
-h1{
+h1 {
     text-align: center;
     color: #74d00a;
 }
 
 .cart-item {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     margin-bottom: 5vh;
     margin-top: 10vh;
@@ -13,60 +13,60 @@ h1{
     padding: 4vh;
     height: 50px;
 }
-  
+
 .cart-item h3:first-child {
-position:absolute;
-left:30vw;
-font-size: 25px;
-width: 30vw;
+    position: absolute;
+    left: 30vw;
+    font-size: 25px;
+    width: 30vw;
 }
 
 .cart-item h3:nth-child(3) {
-position: absolute;
-left:72vw;
-font-size: 25px;
-padding: 2vw;
-margin-left: 2vw;
-width: 0.1vw;
+    position: absolute;
+    left: 72vw;
+    font-size: 25px;
+    padding: 2vw;
+    margin-left: 2vw;
+    width: 0.1vw;
 }
 
 .cart-item button:last-child {
-display: flex;
-justify-content: center;
-align-items: center;
-position:absolute;
-left: 83vw;
-margin-left: 5vw;
-margin-right: 5vw;
-padding: 0.5rem 1rem;
-background-color: #74d00a;
-color: #fff;
-border: none;
-margin-left: 1rem;
-border: 1px solid #000;
-font-size: 1.2rem;
-cursor: pointer;
-width: 2.5vw;
-align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 83vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 0.5rem 1rem;
+    background-color: #74d00a;
+    color: #fff;
+    border: none;
+    margin-left: 1rem;
+    border: 1px solid #000;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 2.5vw;
+    align-self: center;
 }
 
 .cart-item button:nth-child(2) {
-display: flex;
-justify-content: center;
-align-items: center;
-position:absolute;
-left: 65vw;
-margin-left: 5vw;
-margin-right: 5vw;
-padding: 0.5rem 1rem;
-background-color: #f00;
-color: #fff;
-border: none;
-margin-left: 1rem;
-border: 1px solid #000;
-font-size: 1.2rem;
-cursor: pointer;
-width: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 65vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 0.5rem 1rem;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    margin-left: 1rem;
+    border: 1px solid #000;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 2.5vw;
 }
 
 header {
@@ -77,7 +77,7 @@ header {
     padding: 20px;
     background-color: #f2f2f2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    gap:10px;
+    gap: 10px;
 }
 
 .logo img {
@@ -86,9 +86,9 @@ header {
     height: 7vh;
 }
 
-.category{
+.category {
     grid-row: 2/3;
-    width : 65vw;
+    width: 65vw;
     height: 7vh;
     margin-right: 10vw;
     background-color: #ffffff;
@@ -96,18 +96,18 @@ header {
     box-shadow: 0px 4px 4px rgba(243, 243, 243, 0.25);
 }
 
-.category p{
+.category p {
     margin-top: 0vh;
     margin-bottom: 10px;
     padding-top: 1vh;
-    width : 68vw;
+    width: 68vw;
     height: 7vh;
     font-weight: bold;
     text-align: center;
     font-size: 7vh;
 }
-  
-.cart-search{
+
+.cart-search {
     position: relative;
     grid-row: 2/3;
     margin-left: 0.5vw;
@@ -115,17 +115,17 @@ header {
     height: 7vh;
 }
 
-.cart-search a{
-    display:inline-block;
+.cart-search a {
+    display: inline-block;
 }
 
-.cart-total{
+.cart-total {
     position: absolute;
-    left:12%;
+    left: 12%;
     bottom: -15%;
     font-weight: bolder;
     font-size: large;
-    color:red;
+    color: red;
     border-radius: 50%;
     border: 2px solid red;
     padding: 3px;
@@ -136,25 +136,25 @@ header {
     background-color: #ffb4b497;
     height: 2vh;
 }
-  
+
 .cart-search img {
     margin-right: 15px;
     width: 4vw;
     height: 8vh;
 }
 
-@media only screen and (min-width:1024px){
-    
+@media only screen and (min-width:1024px) {
+
     header {
         width: 96%;
         height: 10vh;
         display: flex;
-        justify-content:flex-start;
+        justify-content: flex-start;
         align-items: center;
         padding: 20px;
         background-color: #f2f2f2;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        gap:20px;
+        gap: 20px;
     }
 
     .logo img {
@@ -162,8 +162,8 @@ header {
         height: 12vh;
     }
 
-    .category{
-        width : 60vw;
+    .category {
+        width: 60vw;
         height: 11vh;
         margin-right: 0.2vw;
         background-color: #ffffff;
@@ -171,23 +171,23 @@ header {
         box-shadow: 0px 4px 4px rgba(243, 243, 243, 0.25);
     }
 
-    .category p{
+    .category p {
         margin-top: 0vh;
         margin-bottom: 10px;
         padding-top: 1vh;
-        width : 62vw;
+        width: 62vw;
         height: 12vh;
         font-weight: bold;
         text-align: center;
         font-size: 11vh;
     }
-        
-    .cart-search{
+
+    .cart-search {
         position: relative;
         width: 10vw;
         height: 8vh;
     }
-        
+
     .cart-search img {
         margin-right: 15px;
         width: 2.3vw;

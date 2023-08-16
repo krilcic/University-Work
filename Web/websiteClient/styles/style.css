@@ -6,7 +6,7 @@ header {
     padding: 20px;
     background-color: #f2f2f2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    gap:10px;
+    gap: 10px;
 }
 
 .logo img {
@@ -15,9 +15,9 @@ header {
     height: 7vh;
 }
 
-.category{
+.category {
     grid-row: 2/3;
-    width : 65vw;
+    width: 65vw;
     height: 7vh;
     margin-right: 10vw;
     background-color: #ffffff;
@@ -25,18 +25,18 @@ header {
     box-shadow: 0px 4px 4px rgba(243, 243, 243, 0.25);
 }
 
-.category p{
+.category p {
     margin-top: 0vh;
     margin-bottom: 10px;
     padding-top: 1vh;
-    width : 68vw;
+    width: 68vw;
     height: 7vh;
     font-weight: bold;
     text-align: center;
     font-size: 7vh;
 }
-    
-.cart-search{
+
+.cart-search {
     position: relative;
     grid-row: 2/3;
     margin-left: 0.5vw;
@@ -45,17 +45,17 @@ header {
 }
 
 
-.cart-search a{
-    display:inline-block;
+.cart-search a {
+    display: inline-block;
 }
 
-.cart-total{
+.cart-total {
     position: absolute;
-    left:12%;
+    left: 12%;
     bottom: -15%;
     font-weight: bolder;
     font-size: large;
-    color:red;
+    color: red;
     border-radius: 50%;
     border: 2px solid red;
     padding: 3px;
@@ -66,7 +66,7 @@ header {
     background-color: #ffb4b497;
     height: 2vh;
 }
-    
+
 .cart-search img {
     margin-right: 15px;
     width: 4vw;
@@ -91,7 +91,7 @@ header {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 2px;
 }
-    
+
 .big-picture h2 {
     position: absolute;
     top: 30%;
@@ -101,7 +101,7 @@ header {
     color: white;
     text-align: center;
 }
-    
+
 .big-picture img {
     padding: 5px;
     width: 100%;
@@ -118,18 +118,18 @@ header {
     justify-content: center;
     align-items: center;
 }
-    
+
 .categories {
     list-style: none;
     padding-right: 25px;
 }
-    
+
 .categories li {
     margin-bottom: 30px;
     margin-top: 30px;
     margin-right: 10px;
 }
-    
+
 .categories li button {
     text-decoration: none;
     font-weight: bold;
@@ -158,13 +158,15 @@ header {
     margin: 0px;
     padding: 0px;
 }
-    
+
 .subscribe-layout li {
     margin-bottom: 30px;
     margin-top: 30px;
 }
 
-.contact-button, .newsletter-button, .subscribe-button {
+.contact-button,
+.newsletter-button,
+.subscribe-button {
     padding: 10px 10px;
     margin-right: 0px;
     border-radius: 10px;
@@ -173,15 +175,15 @@ header {
     color: white;
     cursor: pointer;
 }
-    
+
 .contact-button {
     background-color: black;
 }
-    
+
 .newsletter-button {
     background-color: black;
 }
-    
+
 .subscribe-button {
     background-color: black;
 }
@@ -198,7 +200,7 @@ header {
     padding: 30px;
 }
 
-.products-container p{
+.products-container p {
     margin-left: 25vw;
     font-size: 50px;
     align-self: center;
@@ -216,7 +218,7 @@ header {
     padding: 10px;
 }
 
-.product-hover{
+.product-hover {
     position: absolute;
     top: 2%;
     left: 11.5%;
@@ -224,23 +226,24 @@ header {
     height: 72%;
     opacity: 0;
 }
+
 .product:hover .quantity {
     display: block;
 }
 
 .quantity {
     position: absolute;
-    left:90%;
-    bottom:85%;
+    left: 90%;
+    bottom: 85%;
     width: 10%;
     height: 10%;
     display: none;
 }
 
-.quantity h5{
+.quantity h5 {
     font-weight: bolder;
     font-size: large;
-    color:red;
+    color: red;
     border-radius: 50%;
     border: 2px solid red;
     padding: 1px;
@@ -251,7 +254,7 @@ header {
     background-color: #ffb4b497;
 }
 
-.product-hover:hover{
+.product-hover:hover {
     opacity: 1;
 }
 
@@ -263,8 +266,8 @@ header {
 
 .add-to-cart {
     position: absolute;
-    top:60%;
-    left:43%;
+    top: 60%;
+    left: 43%;
     cursor: pointer;
 }
 
@@ -274,18 +277,18 @@ header {
 }
 
 
-@media only screen and (min-width:1024px){
-    
+@media only screen and (min-width:1024px) {
+
     header {
         width: 96%;
         height: 10vh;
         display: flex;
-        justify-content:flex-start;
+        justify-content: flex-start;
         align-items: center;
         padding: 20px;
         background-color: #f2f2f2;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        gap:20px;
+        gap: 20px;
     }
 
     .logo img {
@@ -293,8 +296,8 @@ header {
         height: 12vh;
     }
 
-    .category{
-        width : 60vw;
+    .category {
+        width: 60vw;
         height: 11vh;
         margin-right: 0.2vw;
         background-color: #ffffff;
@@ -302,36 +305,36 @@ header {
         box-shadow: 0px 4px 4px rgba(243, 243, 243, 0.25);
     }
 
-    .category p{
+    .category p {
         margin-top: 0vh;
         margin-bottom: 10px;
         padding-top: 1vh;
-        width : 62vw;
+        width: 62vw;
         height: 12vh;
         font-weight: bold;
         text-align: center;
         font-size: 11vh;
     }
-    
-    .cart-search{
+
+    .cart-search {
         position: relative;
         width: 10vw;
         height: 8vh;
     }
-    
+
     .cart-search img {
         margin-right: 15px;
         width: 2.3vw;
         height: 8vh;
     }
 
-    .cart-total{
+    .cart-total {
         position: absolute;
-        left:12%;
+        left: 12%;
         bottom: -15%;
         font-weight: bolder;
         font-size: large;
-        color:red;
+        color: red;
         border-radius: 50%;
         border: 2px solid red;
         padding: 5px;
@@ -342,7 +345,7 @@ header {
         background-color: #ffb4b497;
         height: 2vh;
     }
-    
+
     .layout {
         display: grid;
         grid-template-columns: 20% 1fr;
@@ -350,7 +353,7 @@ header {
         padding: 15px;
         background-color: rgba(0, 0, 0, 0.576);
     }
-    
+
     .category-column {
         grid-column: 1/2;
         grid-row-start: 1;
@@ -362,16 +365,16 @@ header {
         justify-content: center;
         align-items: center;
     }
-    
+
     .categories {
         list-style: none;
     }
-    
+
     .categories li {
         margin-bottom: 30px;
         margin-top: 30px;
     }
-    
+
     .categories li button {
         text-decoration: none;
         font-weight: bold;
@@ -382,7 +385,7 @@ header {
         cursor: pointer;
         background-color: black;
     }
-    
+
     .big-picture {
         height: fit-content;
         grid-column: 2/3;
@@ -395,20 +398,20 @@ header {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 2px;
     }
-    
+
     .big-picture h2 {
         position: absolute;
         top: 50%;
         left: 5%;
         padding: 20px;
-        background-color: rgb(148,169,39);
+        background-color: rgb(148, 169, 39);
         color: white;
         text-align: center;
     }
-    
+
     .products-container {
         grid-column: 2/3;
-        grid-row-start:2;
+        grid-row-start: 2;
         grid-row-end: 5;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -418,7 +421,7 @@ header {
         padding: 30px;
     }
 
-    .products-container p{
+    .products-container p {
         margin-left: 30vw;
         font-size: 80px;
         align-self: center;
@@ -427,8 +430,8 @@ header {
 
     .add-to-cart {
         position: absolute;
-        top:66%;
-        left:43%;
+        top: 66%;
+        left: 43%;
         cursor: pointer;
     }
 
@@ -444,7 +447,9 @@ header {
         padding: 0px;
     }
 
-    .contact-button, .newsletter-button, .subscribe-button {
+    .contact-button,
+    .newsletter-button,
+    .subscribe-button {
         padding: 10px 20px;
         margin-right: 0px;
 

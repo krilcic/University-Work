@@ -1,18 +1,18 @@
-document.addEventListener("DOMContentLoaded", async function() {
+document.addEventListener("DOMContentLoaded", async function () {
   await fetch("/cart/add", {
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({}) 
+    body: JSON.stringify({})
   })
-  .then(res => res.json())
-  .then(data => {
-    console.log("Add to cart response:", data);
-  })
-  .catch(error => {
-    console.error("Add to cart error:", error);
-  });
+    .then(res => res.json())
+    .then(data => {
+      console.log("Add to cart response:", data);
+    })
+    .catch(error => {
+      console.error("Add to cart error:", error);
+    });
 
   async function updateCart() {
     try {
@@ -70,13 +70,13 @@ document.addEventListener("DOMContentLoaded", async function() {
               },
               body: JSON.stringify({ name: productName })
             })
-            .then(res => res.text())
-            .then(data => {
-              console.log("Request add complete! Response:", data);
-            })
-            .catch(error => {
-              console.error("Error:", error);
-            });
+              .then(res => res.text())
+              .then(data => {
+                console.log("Request add complete! Response:", data);
+              })
+              .catch(error => {
+                console.error("Error:", error);
+              });
 
             const updatedCart = await fetch('http://localhost:3000/cart/getall').then(response => response.json());
 

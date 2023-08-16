@@ -1,22 +1,22 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req,res){
-    res.render('cart',{
+router.get('/', function (req, res) {
+    res.render('cart', {
         title: 'Cart',
         cart: req.session.cart,
         name: 'Car Heaven'
     });
 });
 
-router.post('/add', function(req,res){
+router.post('/add', function (req, res) {
     if (req.session.cart === undefined) {
         req.session.cart = {};
     }
-    res.json({succes:true});
+    res.json({ succes: true });
 });
 
-router.post('/add/:id([0-9]{1,10})', function(req,res){
+router.post('/add/:id([0-9]{1,10})', function (req, res) {
     let name = req.body.name;
     let value = req.session.cart[name];
 
@@ -28,7 +28,7 @@ router.post('/add/:id([0-9]{1,10})', function(req,res){
     res.send("Added to cart");
 });
 
-router.delete('/remove/:id([0-9]{1,10})', function(req,res){
+router.delete('/remove/:id([0-9]{1,10})', function (req, res) {
     let name = req.body.name;
 
     if (req.session.cart === undefined) {
@@ -38,17 +38,17 @@ router.delete('/remove/:id([0-9]{1,10})', function(req,res){
     let value = req.session.cart[name];
 
     if (!(value === undefined)) {
-        if(value > 1){
+        if (value > 1) {
             req.session.cart[name] = value - 1;
             res.send("Removed 1 from cart");
-        } else{
+        } else {
             delete req.session.cart[name];
             res.send("Removed product from cart");
         }
-    }  
+    }
 });
 
-router.get('/getAll', function(req,res){
+router.get('/getAll', function (req, res) {
     let cart = req.session.cart;
     res.json(cart);
 });

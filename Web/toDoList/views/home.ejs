@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDos</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+    <header>
+        <h3>
+            Add todo...
+        </h3>
+        <br>
+        <form action="/add" method="POST">
+            <select name="dropdown" id="dropdown">
+                <% for(let c of kategorije) { %>
+                    <option value="<%= c %>">
+                        <%= c %>
+                    </option>
+                    <% } %>
+            </select>
+
+            <input type="text" name="activity" id="activity" required>
+            <button type="submit">Add todo</button>
+        </form>
+    </header>
+
+    <hr>
+
+    <div>
+        <h3>My todos:</h3>
+        <div class="alltodos">
+            <% for(let c of kategorije) { %>
+                <div class="todo">
+                    <div class="naslov">
+                        <%= c %> (<%= podsjetnik[c].length %>)
+                    </div>
+
+                    <div class="sadrzaj">
+                        <% for(let i=0; i < podsjetnik[c].length; i++) { %>
+                            <div class="stavka">
+                                <div class="broj">
+                                    <%= i+1 %>.
+                                </div>
+
+                                <div class="aktivnost">
+                                    <%= podsjetnik[c][i].aktivnost %>
+                                </div>
+
+                                <div class="datum">
+                                    <%= podsjetnik[c][i].date %>
+                                </div>
+
+                                <div class="brisanje">
+                                    <form action="/delete" method="post">
+                                        <input type="hidden" name="katbrisanje" id="katbrisanje" value="<%= c %>">
+                                        <input type="hidden" name="redbrisanje" id="redbrisanje" value="<%= i %>">
+                                        <button type="submit">
+                                            X
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <div>
+            My todos count: <%= selfCounter %>, all todos count: <%= globalCounter %>
+        </div>
+    </footer>
+</body>
+
+</html>

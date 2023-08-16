@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> <%= title %> </title>
+  <title>
+    <%= title %>
+  </title>
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 
@@ -12,74 +14,79 @@
   <header>
     <%- include('./partials/header'); %>
   </header>
-  
+
   <div class="layout">
-        <div class="big-picture">
-          <h2>Dobrodošli u AutoRevolution</h2>
-          <img src="/images/pozadina.jpg" alt="Pozadina ducana">
-        </div>
+    <div class="big-picture">
+      <h2>Dobrodošli u AutoRevolution</h2>
+      <img src="/images/pozadina.jpg" alt="Pozadina ducana">
+    </div>
 
-    <% if (show_categories) { %>    
-    <div class="products-container">
+    <% if (show_categories) { %>
+      <div class="products-container">
         <% if (!show_products) { %>
-        <p>Odaberite marku automobila</p>
-        <% } %> 
+          <p>Odaberite marku automobila</p>
+          <% } %>
 
-        <% if (show_products) { %>
-          <% cat.products.forEach(product => { %>
-              <div class="product">
-                <img src="/images/<%= product.image %>" alt="<%= product.name %>">
-                <h3><%= product.name %></h3>
+            <% if (show_products) { %>
+              <% cat.products.forEach(product=> { %>
+                <div class="product">
+                  <img src="/images/<%= product.image %>" alt="<%= product.name %>">
+                  <h3>
+                    <%= product.name %>
+                  </h3>
 
-                <div class="product-hover">
-                  <button class="add-to-cart" data-id="<%= product.name %>">
-                    <img src="/images/cart.jpg" alt="Add to Cart">
-                  </button>
+                  <div class="product-hover">
+                    <button class="add-to-cart" data-id="<%= product.name %>">
+                      <img src="/images/cart.jpg" alt="Add to Cart">
+                    </button>
+                  </div>
+
+                  <div class="quantity">
+                    <h5 data-name="<%= product.name %>">
+                      <%= product.quantity %>
+                    </h5>
+                  </div>
                 </div>
+                <% }); %>
+                  <% } %>
+      </div>
 
-                <div class="quantity">
-                  <h5 data-name="<%= product.name %>"><%= product.quantity %></h5>
-                </div>
-              </div>
-          <% }); %>
-        <% } %>
-    </div>
-
-    <div class="category-column">
+      <div class="category-column">
         <ul class="categories">
-            <li><button class="category-button">Audi</button></li>
-            <li><button class="category-button">BMW</button></li>
-            <li><button class="category-button">Citroen</button></li>
-            <li><button class="category-button">Ferrari</button></li>
-            <li><button class="category-button">Fiat</button></li>
-            <li><button class="category-button">Honda</button></li>
-            <li><button class="category-button">Lamborghini</button></li>
-            <li><button class="category-button">Mclaren</button></li>
-            <li><button class="category-button">Range Rover</button></li>
-            <li><button class="category-button">Seat</button></li>
-          </ul>
-    </div>
-    <% } %>
-
-    <% if (!show_categories) { %>
-    <div class="getcategories">
-        <button class="getcatbutton"><a href="/home/categories" class="getcat">Prikaži kategorije</a></button>
-    </div>
-    <% } %>
-
-    <div class="subscribe-section">
-        <ul class="subscribe-layout">
-           <li><button class="contact-button">Contact</button></li> 
-           <li><button class="newsletter-button">Newsletter</button></li>
-           <li><button class="subscribe-button">Subscribe</button></li>
+          <li><button class="category-button">Audi</button></li>
+          <li><button class="category-button">BMW</button></li>
+          <li><button class="category-button">Citroen</button></li>
+          <li><button class="category-button">Ferrari</button></li>
+          <li><button class="category-button">Fiat</button></li>
+          <li><button class="category-button">Honda</button></li>
+          <li><button class="category-button">Lamborghini</button></li>
+          <li><button class="category-button">Mclaren</button></li>
+          <li><button class="category-button">Range Rover</button></li>
+          <li><button class="category-button">Seat</button></li>
         </ul>
-    </div>
+      </div>
+      <% } %>
+
+        <% if (!show_categories) { %>
+          <div class="getcategories">
+            <button class="getcatbutton"><a href="/home/categories" class="getcat">Prikaži kategorije</a></button>
+          </div>
+          <% } %>
+
+            <div class="subscribe-section">
+              <ul class="subscribe-layout">
+                <li><button class="contact-button">Contact</button></li>
+                <li><button class="newsletter-button">Newsletter</button></li>
+                <li><button class="subscribe-button">Subscribe</button></li>
+              </ul>
+            </div>
   </div>
 
   <footer>
     <%- include('./partials/footer'); %>
   </footer>
-  
+
   <script src="/scripts/script.js"></script>
 </body>
+
 </html>

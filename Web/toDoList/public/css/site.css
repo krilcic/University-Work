@@ -1,0 +1,66 @@
+* {
+    font-family: monospace;
+
+}
+
+header {
+    font-size: 150%;
+}
+
+.alltodos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.todo {
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.naslov {
+    background-color: lightgray;
+    text-align: center;
+    padding: 3vh;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.stavka {
+    display: grid;
+    grid-template-columns: 10% 45% 35% 0% 10%;
+    justify-items: start;
+    align-content: center;
+}
+
+.broj {
+    margin-left: 1vw;
+    margin-right: 3vw;
+
+}
+
+.datum {
+    margin-left: 7vw;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.stavka {
+    padding: 1vh;
+    margin: 1vh;
+}
+
+footer {
+    text-align: center;
+    font-size: 150%;
+}
+
+@media screen and (max-width: 768px) {
+    .alltodos {
+        grid-template-columns: 1fr;
+    }
+}

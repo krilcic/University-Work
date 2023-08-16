@@ -15,16 +15,16 @@ for (const productName in cart) {
   total += cart[productName].quantity;
 }
 
-if(total > 0) {
+if (total > 0) {
   cartTotal.textContent = total;
 }
 
-if(total === 0) {
-    cartTotall.style.display = 'none';
+if (total === 0) {
+  cartTotall.style.display = 'none';
 } else {
-    cartTotall.style.display = 'block';
+  cartTotall.style.display = 'block';
 }
-  
+
 
 const cartItems = JSON.parse(localStorage.getItem('cart')) || {};
 
@@ -42,15 +42,15 @@ function renderCartItems() {
     const removeButton = document.createElement('button');
     removeButton.textContent = '-';
     removeButton.addEventListener('click', () => {
-        item.quantity--;
-        localStorage.setItem('cart', JSON.stringify(cartItems));
-        quantityElement.textContent = item.quantity;
-        if (item.quantity === 0) {
-            removeFromCart(item.name);
-        } else {
-            saveCart();
-            renderCartItems();
-        }
+      item.quantity--;
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+      quantityElement.textContent = item.quantity;
+      if (item.quantity === 0) {
+        removeFromCart(item.name);
+      } else {
+        saveCart();
+        renderCartItems();
+      }
     });
 
     const quantityElement = document.createElement('h3');
@@ -74,38 +74,38 @@ function renderCartItems() {
 }
 
 function saveCart() {
-    localStorage.setItem('cart', JSON.stringify(cartItems));
-    let cart = {};
-    const storedCart = localStorage.getItem('cart');
+  localStorage.setItem('cart', JSON.stringify(cartItems));
+  let cart = {};
+  const storedCart = localStorage.getItem('cart');
 
-    if (storedCart) {
-        cart = JSON.parse(storedCart);
-    }
+  if (storedCart) {
+    cart = JSON.parse(storedCart);
+  }
 
-    const cartButton = document.querySelector('.cart-search');
-    const cartTotal = cartButton.querySelector('span');
+  const cartButton = document.querySelector('.cart-search');
+  const cartTotal = cartButton.querySelector('span');
 
-    let total = 0;
+  let total = 0;
 
-    for (const productName in cart) {
-        total += cart[productName].quantity;
-    }
+  for (const productName in cart) {
+    total += cart[productName].quantity;
+  }
 
-    if(total > 0) {
-        cartTotal.textContent = total;
-    }
+  if (total > 0) {
+    cartTotal.textContent = total;
+  }
 
-    if(total === 0) {
-        cartTotall.style.display = 'none';
-    } else {
-        cartTotall.style.display = 'block';
-    }
+  if (total === 0) {
+    cartTotall.style.display = 'none';
+  } else {
+    cartTotall.style.display = 'block';
+  }
 }
 
 function removeFromCart(productName) {
-    delete cartItems[productName];
-    saveCart();
-    renderCartItems();
+  delete cartItems[productName];
+  saveCart();
+  renderCartItems();
 }
 
 

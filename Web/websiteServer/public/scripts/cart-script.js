@@ -26,7 +26,7 @@ async function renderCartItems() {
   if (total === 0) {
     cartItemsContainer.innerHTML = 'Vaša košarica je prazna!';
   }
-  
+
   Object.entries(cart).forEach(item => {
     const cartItemElement = document.createElement('div');
     cartItemElement.classList.add('cart-item');
@@ -45,7 +45,7 @@ async function renderCartItems() {
         }
       }
     }
-    
+
     const removeButton = document.createElement('button');
     removeButton.textContent = '-';
     removeButton.addEventListener('click', async () => {
@@ -57,13 +57,13 @@ async function renderCartItems() {
           },
           body: JSON.stringify({ name: productName })
         })
-        .then(res => res.text())
-        .then(data => {
-          console.log("Request remove 1 complete! Response:", data);
-        })
-        .catch(error => {
-          console.error("Error:", error);
-        });
+          .then(res => res.text())
+          .then(data => {
+            console.log("Request remove 1 complete! Response:", data);
+          })
+          .catch(error => {
+            console.error("Error:", error);
+          });
 
         const updatedCart = await fetch('http://localhost:3000/cart/getall').then(response => response.json());
 
@@ -105,13 +105,13 @@ async function renderCartItems() {
           },
           body: JSON.stringify({ name: productName })
         })
-        .then(res => res.text())
-        .then(data => {
-          console.log("Request add complete! Response:", data);
-        })
-        .catch(error => {
-          console.error("Error:", error);
-        });
+          .then(res => res.text())
+          .then(data => {
+            console.log("Request add complete! Response:", data);
+          })
+          .catch(error => {
+            console.error("Error:", error);
+          });
 
         const updatedCart = await fetch('http://localhost:3000/cart/getall').then(response => response.json());
 
@@ -133,7 +133,7 @@ async function renderCartItems() {
       } catch (error) {
         console.error("Error:", error);
       }
-      
+
       quantityElement.textContent = item[1];
       renderCartItems();
     });
